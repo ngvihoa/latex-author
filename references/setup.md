@@ -36,3 +36,5 @@ Install MiKTeX or TeX Live, Python 3, and a Poppler build; add their executable 
 Bundled assets are original LaTeX source; no font binaries or third-party images are redistributed. TeX Gyre fonts come from the user's TeX distribution. Use only project-provided or appropriately licensed logos, figures, fonts, and data. Record external asset sources and license conditions with the project.
 
 After installing missing packages, rerun doctor and compile a small document. Doctor checks the bundled template's package/font files; it cannot certify every custom document's dependencies. Consult the compiler log for project-specific requirements. Do not silently download replacement fonts or change a mandatory template.
+
+Doctor also runs version probes to catch installed tools that cannot execute (for example, an incompatible binary earlier on PATH). Choose the working TeX/Poppler installation through PATH, then rerun doctor. The helper does not silently replace a failing executable.
