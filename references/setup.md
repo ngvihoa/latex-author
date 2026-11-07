@@ -2,7 +2,9 @@
 
 ## Install the skill
 
-Clone or copy the entire repository into an agent's skills directory as `latex-author`. For Codex, use `${CODEX_HOME:-$HOME/.codex}/skills/latex-author`. Restart or refresh the agent's skill discovery if needed. Keep scripts, references, and assets together. Other agents can load SKILL.md directly; discovery paths depend on the agent.
+Download or clone the entire repository into a location accessible to the agent. Point the agent to `/path/to/latex-author/SKILL.md`; keep scripts, references, and assets together. This explicit loading route requires no vendor-specific skill directory, invocation syntax, SDK, or runtime.
+
+If your agent supports automatic skill discovery, use its documented installation location and refresh procedure. Those conventions are optional integrations, not dependencies of this skill. File access and command execution are needed for authoring/building; image viewing is needed for visual PDF review. Without image viewing, render the pages and disclose that visual review remains incomplete.
 
 Python 3.9+ runs the helpers with no third-party Python dependencies. Run:
 

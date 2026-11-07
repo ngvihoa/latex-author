@@ -4,7 +4,11 @@ An agent skill for writing, compiling, and reviewing LaTeX documents, with evide
 
 ## Install
 
-Copy or clone this repository as `latex-author` inside your agent's skills directory. For Codex this is `${CODEX_HOME:-$HOME/.codex}/skills/latex-author`. Keep the entire folder together, then refresh skill discovery.
+Download or clone this repository anywhere accessible to your agent. Keep the entire folder together: `SKILL.md` references the bundled scripts, documentation, and templates by relative location.
+
+Tell your agent: “Read `/path/to/latex-author/SKILL.md` and use it to write an experimental report from this project's results.” This explicit loading method does not depend on a particular agent's skill discovery mechanism.
+
+For automatic discovery, follow your agent's own skill installation instructions and install the entire folder. Installation paths and invocation syntax vary by agent; no agent-specific runtime or SDK is required. The agent needs file access, command execution, and image viewing to complete the full workflow. You can also run all helpers directly without an agent.
 
 Install Python 3.9+, a TeX distribution, latexmk, and Poppler. See [platform setup and asset requirements](references/setup.md) for installation commands. The helpers do not install system packages automatically.
 
@@ -15,7 +19,7 @@ python3 scripts/latex_author.py build /path/to/new-report/main.tex
 python3 scripts/latex_author.py review /path/to/new-report/build/main.pdf
 ```
 
-Ask your agent: “Use $latex-author to write a Vietnamese experimental report from this project's results” or “Review this existing LaTeX document and fix its layout.”
+Ask for the document language explicitly when needed, for example: “Write the report in Vietnamese” or “Review this existing LaTeX document and fix its layout.”
 
 ## Included
 
