@@ -33,6 +33,21 @@ Ask for the document language explicitly when needed, for example: “Write the 
 
 The repository does not include third-party font binaries, private project data, or an automatic publishing workflow. Source code, template, and example are licensed under MIT; installed dependencies retain their own licenses.
 
+## Academic template references
+
+Use these publisher and venue resources when a document needs an established academic format. Follow the target venue's current author instructions, including the required year, track, review/anonymization mode, page limits, and final submission format. A supplied venue template takes precedence over the bundled starter.
+
+| Format / venue | Template source | Typical use |
+| --- | --- | --- |
+| IEEE | [IEEE Author Center: authoring tools and templates](https://conferences.ieeeauthorcenter.ieee.org/write-your-paper/authoring-tools-and-templates/) | IEEE conference papers; select the template required by the conference. |
+| ACM (`acmart`) | [ACM proceedings templates](https://www.acm.org/publications/proceedings-template) | ACM proceedings; choose the class options specified by the venue. |
+| Springer LNCS | [LNCS author instructions and LaTeX proceedings template](https://link.springer.com/series/558/information-for-authors-and-editors) | Computer science conference proceedings in LNCS and related series. |
+| Springer Nature (`sn-jnl`) | [Official Springer Nature template on Overleaf](https://www.overleaf.com/latex/templates/springer-nature-latex-template/gsvvftmrppwq) | Journal manuscripts; check the individual journal's instructions and reference style. |
+| ACL | [Official ACL style files](https://github.com/acl-org/acl-style-files) | Papers for Association for Computational Linguistics venues; check venue-specific requirements. |
+| NeurIPS | [NeurIPS 2026 call for papers and author resources](https://neurips.cc/Conferences/2026/CallForPapers) | Machine learning conference papers; use the style files for the intended edition and track. |
+
+These links are references, not bundled or preinstalled templates. Download the required author kit separately, retain its license, and use its documented engine and build procedure. The `init` command creates only this repository's general report template; it does not select or install the formats above.
+
 ## Development verification
 
 ```sh
