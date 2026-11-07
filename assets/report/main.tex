@@ -5,56 +5,52 @@
 \usepackage[margin=20mm]{geometry}
 \usepackage{graphicx,booktabs}
 \usepackage[unicode,hidelinks]{hyperref}
-\renewcommand{\abstractname}{Tóm tắt}
-\renewcommand{\figurename}{Hình}
-\renewcommand{\tablename}{Bảng}
-\renewcommand{\refname}{Tài liệu tham khảo}
-\title{Báo cáo thực nghiệm minh họa\\\large A reproducible reporting example}
+\title{An Illustrative Experimental Report\\\large A reproducible reporting example}
 \author{Example author}
 \date{}
 \begin{document}
 \maketitle
 \begin{abstract}
-Tài liệu minh họa cấu trúc báo cáo, bảng kết quả và trích dẫn bằng LaTeX.
-Mọi số đo trong bảng là dữ liệu giả lập để kiểm tra cách trình bày,
-không phải kết quả của một mô hình hay thực nghiệm đã thực hiện.
+This document demonstrates report structure, results tables, and citations in LaTeX.
+Every measurement in the table is synthetic and serves only to demonstrate formatting.
+These values are not results from a completed model evaluation or experiment.
 \end{abstract}
-\section{Mục tiêu}
-Báo cáo cần liên kết phương pháp, thiết lập và bằng chứng với kết luận.
-Ví dụ này sử dụng cách tổ chức tài liệu của LaTeX~\cite{lamport1994}.
-\section{Phương pháp và thiết lập}
-Trong báo cáo thực tế, mô tả dữ liệu, cách chia tập, cấu hình và giao thức
-đánh giá từ các nguồn đã kiểm chứng. Ghi rõ đơn vị và điều kiện đo.
-Hình~\ref{fig:workflow} mô tả quy trình biên soạn, không phải kiến trúc mô hình.
+\section{Objective}
+A report should connect its method, setup, and evidence to its conclusions.
+This example uses the document preparation system described by Lamport~\cite{lamport1994}.
+\section{Method and setup}
+In a real report, describe the dataset, splits, configuration, and evaluation protocol
+using verified sources. State the units and measurement conditions.
+Figure~\ref{fig:workflow} describes the authoring process, rather than a model architecture.
 \begin{figure}[ht]
 \centering
 \fbox{\parbox{0.85\linewidth}{\centering
-Nguồn đã kiểm chứng $\rightarrow$ Nội dung và bảng biểu\\[4pt]
-$\rightarrow$ Biên dịch $\rightarrow$ Kiểm tra PDF}}
-\caption{Quy trình viết và kiểm tra tài liệu. Hình vector tạo trực tiếp bằng LaTeX.}
+Verified sources $\rightarrow$ Text, tables, and figures\\[4pt]
+$\rightarrow$ Compilation $\rightarrow$ PDF inspection}}
+\caption{The authoring and review process, drawn directly in LaTeX as a vector figure.}
 \label{fig:workflow}
 \end{figure}
-\section{Kết quả minh họa}
-Bảng~\ref{tab:results} chỉ dùng để kiểm tra bố cục và cách ghi đơn vị.
-Không được diễn giải những giá trị giả lập này thành phát hiện khoa học.
+\section{Illustrative results}
+Table~\ref{tab:results} demonstrates layout and explicit units.
+Its synthetic values must not be interpreted as scientific findings.
 \begin{table}[ht]
 \centering
-\caption{Dữ liệu giả lập; không phải số đo thực nghiệm.}
+\caption{Synthetic data for formatting only; not experimental measurements.}
 \label{tab:results}
 \begin{tabular}{lrr}
 \toprule
-Cấu hình & Điểm minh họa (\%) & Thời gian minh họa (s) \\
+Configuration & Illustrative score (\%) & Illustrative time (s) \\
 \midrule
 A & 80.0 & 12.0 \\
 B & 82.0 & 15.0 \\
 \bottomrule
 \end{tabular}
 \end{table}
-\section{Thảo luận và giới hạn}
-Ví dụ xác nhận cách trình bày tiếng Việt, bảng, hình và bibliography.
-Nó không xác nhận chất lượng của bất kỳ thuật toán nào.
-\section{Kết luận}
-Thay nội dung minh họa bằng bằng chứng của dự án trước khi sử dụng báo cáo.
+\section{Discussion and limitations}
+This example demonstrates text, table, figure, and bibliography formatting.
+It provides no evidence about the quality of any algorithm.
+\section{Conclusion}
+Replace the demonstration content with evidence from the actual project before delivery.
 \bibliographystyle{plain}
 \bibliography{references}
 \end{document}

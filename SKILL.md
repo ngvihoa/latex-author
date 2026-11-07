@@ -13,6 +13,8 @@ Inspect the project's instructions, existing LaTeX entrypoint, build configurati
 
 Before writing, follow [environment setup](references/setup.md). Run `python3 <skill>/scripts/latex_author.py doctor`. For existing documents, use `doctor --engine <engine>` and verify their additional packages and fonts. The bundled template uses XeLaTeX and TeX Gyre fonts. Install missing dependencies when authorized and permitted; otherwise give exact missing components and continue independent work. Do not claim compilation or visual review occurred when tools are unavailable.
 
+Use the requested document language; the bundled starter and primary demo are in English. For Vietnamese, consult `examples/vietnamese/main.tex` for translated labels and UTF-8 text using the same font setup.
+
 For a new report without a supplied template, run `python3 <skill>/scripts/latex_author.py init <destination>`. It refuses to replace an existing destination. Adapt the template and remove its demonstration content before delivery.
 
 ## Author or revise

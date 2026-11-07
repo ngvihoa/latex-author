@@ -41,7 +41,18 @@ class CliTests(unittest.TestCase):
             result = self.call('review', pdf, '--output', output)
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertTrue(list(output.glob('page-*.png')))
-            self.assertIn('Mục tiêu', (output / 'text.txt').read_text())
+            self.assertIn('Objective', (output / 'text.txt').read_text())
+            vietnamese = SCRIPT.parent.parent / 'examples' / 'vietnamese'
+            vi_target = Path(tmp) / 'vietnamese'
+            vi_target.mkdir()
+            for name in ('main.tex', 'references.bib'):
+                shutil.copy2(vietnamese / name, vi_target / name)
+            result = self.call('build', vi_target / 'main.tex')
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            vi_output = Path(tmp) / 'vietnamese-render'
+            result = self.call('review', vi_target / 'build' / 'main.pdf', '--output', vi_output)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertIn('Mục tiêu', (vi_output / 'text.txt').read_text())
             self.assertNotEqual(self.call('review', pdf, '--output', output).returncode, 0)
             (target / 'main.tex').write_text('\\documentclass{article}\\begin{document}\\undefinedcommand\\end{document}')
             self.assertNotEqual(self.call('build', target / 'main.tex').returncode, 0)
